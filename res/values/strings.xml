@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SeaBattle</string>
+    <string name="playersCountTextViewText">Players count:</string>
+    <string name="change_name_button">Change</string>
+    <string name="button_confirmed">Change</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="name_text">Name:</string>
+    <string name="password_text">Password:</string>
+    <string name="change_password_button">Change</string>
+    <string name="change_name_title">Change name</string>
+    <string name="name_exist">Name already exists</string>
+    <string name="success_change">Name changed</string>
+    <string name="leave_button_text">Leave</string>
+    <string name="playerName">playerName</string>
+    <string name="playerPassword">playerPassword</string>
+    <string name="create_game_title">Create new game</string>
+    <string name="new_game">New Game</string>
+    <string name="create_button">Create</string>
+    <string name="current_player">Current player is</string>
+    <string name="turn_text_view_text">turn</string>
+    <string name="connected_game">Connected success!</string>
+    <string name="created_game">Created success!</string>
+    <string name="player_text">Players in game:</string>
+    <string name="refresh">Refresh</string>
+    <string name="return_in_game">Whould you like return in game?</string>
+    <string name="accept_return">Yes</string>
+    <string name="decline_return">No</string>
+</resources>

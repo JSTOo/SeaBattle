@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/name_text"
+            android:id="@+id/name_text" android:layout_gravity="center_horizontal|left" android:layout_margin="8dp"
+            style="@style/CustomTextTheme"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_name_button"
+            android:id="@+id/change_nameButton" android:layout_gravity="center_horizontal" android:layout_margin="8dp"
+            style="@style/CustomTextTheme"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/password_text"
+            android:id="@+id/password_text" android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp" android:visibility="gone" style="@style/CustomTextTheme"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_password_button"
+            android:id="@+id/button" android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp" android:visibility="gone" style="@style/CustomTextTheme"/>
+</LinearLayout>

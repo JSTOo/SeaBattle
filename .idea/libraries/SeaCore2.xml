@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SeaCore">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/SeaCore.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/list"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/gameField"
+            android:layout_margin="8dp" android:visibility="visible"/>
+    <view android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          class="com.example.sea_battle.view.RedactorFieldView" android:id="@+id/gameField"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentLeft="true"
+            android:layout_margin="8dp"/>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/lobbyList" android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
+            android:layout_alignParentTop="true" android:layout_marginTop="0dp" android:layout_above="@+id/create_button"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_button"
+
+            android:id="@+id/create_button" android:layout_gravity="center_horizontal" style="@style/CustomTextTheme"
+            android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+

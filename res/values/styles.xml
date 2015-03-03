@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomTextTheme">
+        <item name="android:textColor">#FFFF11</item>
+        <item name="android:background">#000000</item>
+    </style>
+    <style name="CustomDialogTheme" parent="android:Theme.Dialog">
+        <item name="android:background">#000000</item>
+        <item name="android:textColor">#FFFF11</item>
+        <item name="android:titleTextStyle">@style/CustomTextTheme</item>
+        <item name="android:buttonStyle">@style/CustomTextTheme</item>
+        <item name="android:colorBackground">#000000</item>
+    </style>
+
+
+</resources>

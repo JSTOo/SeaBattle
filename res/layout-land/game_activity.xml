@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <Button
+            style="@style/CustomTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/leave_button_text"
+            android:id="@+id/button_leave"
+            android:layout_alignBottom="@+id/game_field" android:layout_alignParentRight="true"
+            android:layout_margin="8dp"/>
+    <view android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          class="com.example.sea_battle.view.GameFieldView" android:id="@+id/game_field" android:layout_alignParentTop="true"
+          android:layout_alignParentLeft="true" android:longClickable="false" android:layout_margin="8dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/turn_text" android:layout_centerHorizontal="true"
+            style="@style/CustomTextTheme" android:layout_margin="8dp" android:layout_alignParentTop="true"
+            android:layout_alignParentRight="false" android:layout_toRightOf="@+id/game_field"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/players_text" android:layout_below="@+id/turn_text"
+            android:layout_toRightOf="@+id/game_field" android:layout_margin="8dp" style="@style/CustomTextTheme"/>
+</RelativeLayout>
