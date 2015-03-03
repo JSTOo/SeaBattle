@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 import com.example.sea_battle.R;
 import com.example.sea_battle.core.PostCommands;
 import com.example.sea_battle.view.GameFieldView;
@@ -53,6 +52,8 @@ public class GameActivity extends Activity {
             }
         });
 
+
+
     }
 
     @Override
@@ -66,14 +67,12 @@ public class GameActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-        flag = false;
         timer.cancel();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        flag = true;
         turnTextView = (TextView) findViewById(R.id.turn_text);
         gameView  = (GameFieldView) findViewById(R.id.game_field);
         playersTextView = (TextView) findViewById(R.id.players_text);
@@ -88,24 +87,16 @@ public class GameActivity extends Activity {
                     @Override
                     public void run() {
                         if (flag) {
-                            if (game != null )
-                                if (game.getWinner() == null) {
-                                    if (game.getCurrentPlayer()!= null)
-                                        turnTextView.setText(game.getCurrentPlayer().getName() + " " + getString(R.string.turn_text_view_text));
-                                    String names = "";
-                                    for (Player p : game.getPlayers()) {
-                                        if (p != null)
-                                            names += p.getName() + "\n";
-                                    }
-                                    playersTextView.setText(getString(R.string.player_text) + "\n" + names);
-                                    gameView.setCurrentGame(game);
-                                    gameView.invalidate();
-                                } else {
-                                    Toast.makeText(context, game.getWinner().getName() + " " + getString(R.string.win_game), Toast.LENGTH_LONG).show();
-                                    PostCommands commands = new PostCommands(null);
-                                    commands.leaveGame(PostCommands.me);
-                                    onBackPressed();
-                                }
+                            if (game != null && game.getCurrentPlayer()!= null)
+                                 turnTextView.setText(game.getCurrentPlayer().getName() + " " + getString(R.string.turn_text_view_text));
+                            String names = "";
+                            for (Player p : game.getPlayers()){
+                               names += p.getName()+"\n";
+                            }
+                            playersTextView.setText(getString(R.string.player_text)+"\n"+names);
+                            gameView.setCurrentGame(game);
+                            gameView.invalidate();
+                            Log.d("DEBUG","Update game UI ");
                         }  else {
                             cancel();
                         }
@@ -115,8 +106,6 @@ public class GameActivity extends Activity {
         },0,2000);
         gameView.setMe(me);
     }
-
-
 
     @Override
     protected void onDestroy() {
